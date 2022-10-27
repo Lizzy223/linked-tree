@@ -45,7 +45,7 @@ const Homepage = () => {
         </Box>
         <Box w='90%' mt='6rem' alignItems='center' display='flex' flexDirection={['column','column']} >
             <Divider/>
-            <Box display='flex' h='100px' alignItems='center'flexDirection={['row','column']} justifyContent='space-between' w='full'>
+            <Box display='flex' h={['100%','100px']} alignItems='center' gap={['3','0']} flexDirection={['column','row']} justifyContent='space-between' w='full'>
                 <Image src='assets/zuri.png' alt=''/>
                 <Text color='#667085' fontWeight='400'>HNG Internship 9 Frontend Task</Text>
                 <Image alt='' src='assets/I4G.png'/>
