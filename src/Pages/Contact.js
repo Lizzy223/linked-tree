@@ -2,84 +2,60 @@ import {
   Container,
   Box,
   Button,
+  Image,
   VStack,
-  Wrap,
-  WrapItem,
-  FormControl,
-  FormLabel,
+  Text,
   Input,
-  InputGroup,
-  InputLeftElement,
+  HStack,
   Textarea,
+  Checkbox,
 } from '@chakra-ui/react';
-import {
-  MdOutlineEmail,
-} from 'react-icons/md';
-import {  BsPerson } from 'react-icons/bs';
 
 export default function Contact() {
   return (
-    <Container bg="#9DC4FB" w={["100vw",'full']} display='flex' justifyContent='center' alignItems='center' flexDirection='column' h={['100vh','100vh']}  >
-     
-        <Box
-          bg="whitesmoke"
-          color="white"
-          borderRadius="lg"
-          m={{ sm: 4, md: 16, lg: 10 }}
-          p={{ sm: 5, md: 5, lg: 16 }}>
-          <Box p={4}>
-            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
-              
-              <WrapItem>
-                <Box bg="white" borderRadius="lg">
-                  <Box m={8} color="#0B0E3F">
-                    <VStack spacing={5}>
-                      <FormControl id="name">
-                        <FormLabel>Name</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<BsPerson color="gray.800" />}
-                          />
-                          <Input type="text" size="md" />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>Mail</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<MdOutlineEmail color="gray.800" />}
-                          />
-                          <Input type="text" size="md" />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>Message</FormLabel>
-                        <Textarea
-                          borderColor="gray.300"
-                          _hover={{
-                            borderRadius: 'gray.300',
-                          }}
-                          placeholder="message"
-                        />
-                      </FormControl>
-                      <FormControl id="name" float="right">
-                        <Button
-                          variant="solid"
-                          bg="#0D74FF"
-                          color="white"
-                          _hover={{}}>
-                          Send Message
-                        </Button>
-                      </FormControl>
-                    </VStack>
-                  </Box>
-                </Box>
-              </WrapItem>
-            </Wrap>
-          </Box>
+    <Container bg="#fff" w={["100vw",'full']} display='flex' justifyContent='center' alignItems='center' flexDirection='column' h={['100%','100%']}  >
+     <Box mt={['64px' ,'154px']} w='full'>
+        <Text fontWeigth='600' fontSize='36px'>Contact Me</Text>
+        <Text fontSize={['18px', '20px']} color='#475467' mt='1rem' fontWeight='400'>Hi there, contact me to ask me about anything you have in mind.</Text>
+        <Box w='full' mt='1.5rem' display='flex' flexDirection='column' gap='6!important'>
+            <HStack w='full' gap={['6',0]} display='flex' flexDirection={['column','row']} justifyContent='space-between'>
+                <VStack align='flex-start' w={['100%','50%']}>
+                    <Text fontWeight='500' fontSize='14px' color='#344054'>First Name</Text>
+                    <Input placeholder='Enter your first name' fontWeight='400' fontSize='16px' borderRadius='8px' border='1px solid #D0D5DD' color='#667085' />
+                </VStack>
+                 <VStack mt={['6','0']} align='flex-start' w={['100%','50%']}>
+                    <Text fontWeight='500' fontSize='14px' color='#344054'>Last Name</Text>
+                    <Input placeholder='Enter your last name' fontWeight='400' fontSize='16px' borderRadius='8px' border='1px solid #D0D5DD' color='#667085' />
+                </VStack>
+            </HStack>
+            <HStack w='full' display='flex' flexDirection={['column','row']} justifyContent='space-between'>
+                <VStack align='flex-start' w={['100%','100%']}>
+                    <Text fontWeight='500' fontSize='14px' color='#344054'>Email</Text>
+                    <Input placeholder='yourname@email.com' fontWeight='400' fontSize='16px' borderRadius='8px' border='1px solid #D0D5DD' color='#667085' />
+                </VStack>
+            </HStack>
+            <HStack w='full' display='flex' flexDirection={['column','row']} justifyContent='space-between'>
+                <VStack align='flex-start' w={['100%','100%']}>
+                    <Text fontWeight='500' fontSize='14px' color='#344054'>Message</Text>
+                    <Textarea placeholder="Send me a message and I'll reply you as soon as possible..." fontWeight='400' fontSize='16px' borderRadius='8px' border='1px solid #D0D5DD' color='#667085' />
+                </VStack>
+            </HStack>
+           <HStack>
+            <Checkbox/>
+             <Text fontSize='16px' fontWeight='400' color='#475467'>You agree to providing your data to name who may contact you.</Text>
+           </HStack>
+           
+            <Button bg='#1570EF' color='#fff' borderRadius='8px' border='1px solid #1570EF' w='100%' >Send Message </Button>
         </Box>
+        <Box w={['100%','90%']} mt={['3rem','6rem']} alignItems='center' display='flex' flexDirection={['column','column']} >
+            
+            <Box display='flex' h={['100%','100px']} alignItems='center' gap={['3','0']} flexDirection={['column','row']} justifyContent='space-between' w='full'>
+                <Image src='assets/zuri.png' alt=''/>
+                <Text color='#667085' fontWeight='400'>HNG Internship 9 Frontend Task</Text>
+                <Image alt='' src='assets/I4G.png'/>
+            </Box>
+        </Box>
+     </Box>
     </Container>
   );
 }
