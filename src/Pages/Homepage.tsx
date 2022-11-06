@@ -39,7 +39,7 @@ const Homepage = () => {
                 Design books
             </Button>
              <Button  as='a' id='btn__contact' href='https://linked-tree.vercel.app/contact' target='_blank' w={['90%','90%']} h='4.75rem' m='auto' bg='#EAECF0' borderRadius='8px' color='#101828' fontWeight='500' fontSize='18px' border='1px solid #EAECF0'>
-                Contact
+                Contact Me
             </Button>
             <Box display={['flex','flex']} justifyContent='center' alignItems='center' padding={['.75rem','24px, 32px, 24px, 32px']} mt={['1rem','1rem']} gap={['3','6']}>
                 <Image src='assets/slack.png' alt=''/>
